@@ -1,0 +1,13 @@
+<html>
+<frameset rows="26%,*,5%" border=10 bordercolor="red">
+	<frame name="Header" src="Header.html">
+	<frameset cols="20%,*">
+		<frame name="LeftMenu" src="LeftMenu.html">		
+		<frameset cols="70%,*" border=0>
+			<frame name="UserRegistration" src="UserRegistration.html">
+			<frame name="Calender" src="PradeepCalender.html">
+		</frameset>
+	</frameset>
+	<frame name="Footer" src="Footer.html">
+</frameset>
+</html>

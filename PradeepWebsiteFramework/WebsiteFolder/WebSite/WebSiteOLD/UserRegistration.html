@@ -1,0 +1,46 @@
+<html>
+<script>
+	function RegisterUser() 
+	{ 
+		var fName = document.getElementById("fname").value;
+		var mName = document.getElementById("mname").value;
+		var lName = document.getElementById("lname").value;
+		alert("User " + fName + " " + mName + " " + lName + " " + " Created Sucessfully."); 
+	};
+</script>
+<body>
+<table>
+	<tr><td><label>First Name<font color="red">*</font>:</label></td><td><input name="fname" id="fname" type="text"></td></tr>
+	<tr><td><label>Middle Name:</label></td><td><input  name="mname" id="mname" type="text"></td></tr>
+	<tr><td><label>Last Name<font color="red">*</font>:</label></td><td><input name="lname" id="lname" type="text"></td></tr>
+
+	<tr><td><label>Marital Status<font color="red">*</font>:</label></td>
+	<td><Select name="marital">
+		<Options>
+			<Option value="4">Unmarried</Option>
+			<Option value="2">Married</Option>			
+		</Options>
+		</Select>
+	</td></tr>
+
+	<tr><td><label>Gender<font color="red">*</font>:</label></td>
+	<td>
+		<input type="radio" name="gender" value="Male"> Male
+  		<input type="radio" name="gender" value="Female"> Female
+	</td>
+	</tr>
+	
+	<tr><td><label>Subjects<font color="red">*</font>:</label></td>
+	<td>
+		<input type="checkbox" name="selenium" value="Selenium">Selenium
+		<input type="checkbox" name="soapui" value="Selenium">Soap UI
+		<input type="checkbox" name="jmeter" value="Selenium">JMeter
+	</td>
+	</tr>	
+	
+	<tr><td>  </td></tr>
+	<tr><td><input type="button" id="Register" value="Register" onclick="RegisterUser();"></td></tr>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<html>
+<head>
+
+<script>
+ $(function () {
+   var bindDatePicker = function() {
+		$(".date").datetimepicker({
+        format:'YYYY-MM-DD',
+			icons: {
+				time: "fa fa-clock-o",
+				date: "fa fa-calendar",
+				up: "fa fa-arrow-up",
+				down: "fa fa-arrow-down"
+			}
+		}).find('input:first').on("blur",function () {
+			// check if the date is correct. We can accept dd-mm-yyyy and yyyy-mm-dd.
+			// update the format if it's yyyy-mm-dd
+			var date = parseDate($(this).val());
+
+			if (! isValidDate(date)) {
+				//create date based on momentjs (we have that)
+				date = moment().format('YYYY-MM-DD');
+			}
+
+			$(this).val(date);
+		});
+	}
+   
+   var isValidDate = function(value, format) {
+		format = format || false;
+		// lets parse the date to the best of our knowledge
+		if (format) {
+			value = parseDate(value);
+		}
+
+		var timestamp = Date.parse(value);
+
+		return isNaN(timestamp) == false;
+   }
+   
+   var parseDate = function(value) {
+		var m = value.match(/^(\d{1,2})(\/|-)?(\d{1,2})(\/|-)?(\d{4})$/);
+		if (m)
+			value = m[5] + '-' + ("00" + m[3]).slice(-2) + '-' + ("00" + m[1]).slice(-2);
+
+		return value;
+   }
+   
+   bindDatePicker();
+ });
+ </script>
+<style type="text/css">
+			.reqError{
+				color: #ff0000; /*Red Color*/
+				font-weight: bold;
+			}
+</style>
+<script src="jquery.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="moment-with-locales.min.js"></script>
+<script src="bootstrap-datetimepicker.min.js"></script>
+<script>
+
+	var loadFile = function(event) {
+		var image = document.getElementById('output');
+		image.src = URL.createObjectURL(event.target.files[0]);
+	};
+
+	var ide = 105;
+	function displayUser(usr) 
+	{ 
+		alert("User Id:  " + usr); 
+	};
+	function RegisterUser() 
+	{ 
+		var fName = document.getElementById("fname").value;
+		var mName = document.getElementById("mname").value;
+		var lName = document.getElementById("lname").value;
+		var age = document.getElementById("age").value;
+		var e = document.getElementById("marital");
+		var marital = e.options[e.selectedIndex].text;	
+		
+		if(fName.trim()=="" || lName.trim()==""  || age.trim()==""){
+			if(fName.trim()==""){
+				document.getElementById("reqTxtFname").innerHTML="* First Name is required.";
+			} else{
+				document.getElementById("reqTxtFname").innerHTML="";
+			}
+			if(lName.trim()==""){
+				document.getElementById("reqTxtLname").innerHTML="* Last Name is required.";
+			} else{
+				document.getElementById("reqTxtLname").innerHTML="";
+			}
+			if(age.trim()==""){
+				document.getElementById("reqTxtAge").innerHTML="* Age is required.";
+			} else{
+				document.getElementById("reqTxtAge").innerHTML="";
+			}
+			return false;
+		} 
+
+		var x=document.getElementById('studentList').insertRow(1);
+		var c1=x.insertCell(0);
+		var c2=x.insertCell(1);
+		var c3=x.insertCell(2);
+		var c4=x.insertCell(3);
+		c1.innerHTML=ide;
+		c2.innerHTML=fName;
+		c3.innerHTML=age;
+		c4.innerHTML=marital;
+		alert("User Registered Sucessfully with id " + ide); 
+		ide = ide + 1;
+	};
+</script>
+</head>
+
+<body>
+<table id='studentList' border=2 width=500>
+	<tr><td>Id</td><td>Name</td><td>Age</td><td>Marital Status</td></tr>
+	<tr><td>101</td><td onclick="displayUser('101');">Pradeep</td><td>36</td><td>Married</td></tr>
+	<tr><td>102</td><td onclick="displayUser('102');">Ranbeer</td><td>20</td><td>Unmarried</td></tr>
+	<tr><td>103</td><td onclick="displayUser('103');">Sumit</td><td>19</td><td>Married</td></tr>
+	<tr><td>104</td><td onclick="displayUser('104');">Gaurav</td><td>21</td><td>Married</td></tr>
+</table>
+<br>
+<table border=0 width=675>
+	<tr><td><label>First Name<font color="red">*</font>:</label></td><td width="220"><input class="fNameClass" name="fname" id="fname" type="text"><span id="reqTxtFname" class="reqError"></span></td>     <td rowspan=7><img id="output" width="200" height="200"/></td></tr>
+	<tr><td><label>Middle Name:</label></td><td><input  name="mname" id="mname" type="text"></td></tr>
+	<tr><td><label>Last Name<font color="red">*</font>:</label></td><td><input name="lname" id="lname" type="text"><span id="reqTxtLname" class="reqError"></span></td></tr>
+
+	<tr><td><label>Age<font color="red">*</font>:</label></td><td><input name="age" id="age" type="text"><span id="reqTxtAge" class="reqError"></span></td></tr>
+
+	<tr><td><label >Marital Status<font color="red">*</font>:</label></td>
+	<td><Select name="marital" id="marital">
+		<Options>
+			<Option value="4">Unmarried</Option>
+			<Option value="2">Married</Option>
+		</Options>
+		</Select>
+	</td></tr>
+
+	<tr><td><label>Gender<font color="red">*</font>:</label></td>
+	<td>
+		<input type="radio" name="gender" value="Male" checked=true> Male
+  		<input type="radio" name="gender" value="Female"> Female
+	</td>
+	</tr>
+	
+	<tr><td><label>Subjects<font color="red">*</font>:</label></td>
+	<td>
+		<input type="checkbox" name="selenium" value="Selenium">Selenium
+		<input type="checkbox" name="soapui" value="Selenium">Soap UI
+		<input type="checkbox" name="jmeter" value="Selenium">JMeter
+	</td>
+	</tr>			
+	
+	<tr><td>  </td></tr>
+	<tr>
+		<td><input type="button" id="Register" value="Register" onclick="RegisterUser();"></td>
+		<td><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></td>
+		<td align=center><label for="file" style="cursor: pointer;">Upload Image</label></td>
+	</tr>
+</table>
+</body>
+</html>

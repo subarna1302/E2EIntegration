@@ -1,0 +1,71 @@
+<html>
+<body>
+<table width=1350 height=40 bgcolor="yellow" border=0>
+	<tr>
+		<td>
+			Frequently Asked Questions:	<br>
+			<br>(1) Session will be Online OR Offline ?
+			<br>(2) Assignment will be given OR not ?
+			<br>(3) Recording will be provided OR not ?
+			<br>(4) Session will be Online OR Offline ?
+			<br>(5) Assignment will be given OR not ?
+			<br>(6) Recording will be provided OR not ?
+			<br>(7) Session will be Online OR Offline ?
+			<br>(8) Assignment will be given OR not ?
+			<br>(9) Recording will be provided OR not ?
+			<br>(10) Session will be Online OR Offline ?
+			<br>(11) Assignment will be given OR not ?
+			<br>(12) Recording will be provided OR not ?
+			<br>(13) Session will be Online OR Offline ?
+			<br>(14) Assignment will be given OR not ?
+			<br>(15) Recording will be provided OR not ?
+			<br>(16) Session will be Online OR Offline ?
+			<br>(17) Assignment will be given OR not ?
+			<br>(18) Recording will be provided OR not ?
+			<br>(19) Session will be Online OR Offline ?
+			<br>(20) Assignment will be given OR not ?
+			<br>(21) Recording will be provided OR not ?
+			<br>(22) Session will be Online OR Offline ?
+			<br>(23) Assignment will be given OR not ?
+			<br>(24) Recording will be provided OR not ?
+			<br>(25) Session will be Online OR Offline ?
+			<br>(26) Assignment will be given OR not ?
+			<br>(27) Recording will be provided OR not ?
+			<br>(28) Session will be Online OR Offline ?
+			<br>(29) Assignment will be given OR not ?
+			<br>(30) Recording will be provided OR not ?
+			<br>(31) Session will be Online OR Offline ?
+			<br>(32) Assignment will be given OR not ?
+			<br>(33) Recording will be provided OR not ?
+			<br>(34) Session will be Online OR Offline ?
+			<br>(35) Assignment will be given OR not ?
+			<br>(36) Recording will be provided OR not ?
+			<br>(37) Recording will be provided OR not ?
+			<br>(38) Recording will be provided OR not ?
+			<br>(39) Recording will be provided OR not ?
+			<br>(40) Recording will be provided OR not ?
+			<br>(41) Recording will be provided OR not ?
+			<br>(42) Recording will be provided OR not ?
+			<br>(43) Recording will be provided OR not ?
+			<br>(44) Recording will be provided OR not ?
+			<br>(45) Recording will be provided OR not ?
+			<br>(46) Recording will be provided OR not ?
+			<br>(47) Recording will be provided OR not ?
+			<br>(48) Recording will be provided OR not ?
+			<br>(49) Recording will be provided OR not ?
+			<br>(50) Recording will be provided OR not ?
+			<br><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label>Write your Question:</label><input type="text" id="ques" style="font-size: 18pt; width:500px; ">		
+		</td>
+	</tr>
+</table>
+</body>
+</html>

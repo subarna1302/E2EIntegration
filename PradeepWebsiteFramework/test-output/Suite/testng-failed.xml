@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.org.PradeepWebsite.tests.RegistrationTests">
+        <methods>
+          <include name="validateuploadImage"/>
+          <include name="SaveReport"/>
+          <include name="StartReport"/>
+          <include name="OpenBrowser"/>
+          <include name="setup"/>
+          <include name="CloseBrowser"/>
+        </methods>
+      </class> <!-- com.org.PradeepWebsite.tests.RegistrationTests -->
+      <class name="com.org.PradeepWebsite.tests.FooterTest">
+        <methods>
+          <include name="setup"/>
+          <include name="validatefootertxt"/>
+          <include name="SaveReport"/>
+          <include name="StartReport"/>
+          <include name="OpenBrowser"/>
+          <include name="CloseBrowser"/>
+        </methods>
+      </class> <!-- com.org.PradeepWebsite.tests.FooterTest -->
+      <class name="com.org.PradeepWebsite.tests.LeftMenuTests">
+        <methods>
+          <include name="SaveReport"/>
+          <include name="StartReport"/>
+          <include name="OpenBrowser"/>
+          <include name="CloseBrowser"/>
+          <include name="validateSeleniumPage"/>
+          <include name="validateSeleniumLink"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.org.PradeepWebsite.tests.LeftMenuTests -->
+      <class name="com.org.PradeepWebsite.tests.HeaderTests">
+        <methods>
+          <include name="validateBannerImage"/>
+          <include name="validateFAQLink"/>
+          <include name="SaveReport"/>
+          <include name="StartReport"/>
+          <include name="OpenBrowser"/>
+          <include name="CloseBrowser"/>
+          <include name="setup"/>
+          <include name="validateMarquee"/>
+        </methods>
+      </class> <!-- com.org.PradeepWebsite.tests.HeaderTests -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
